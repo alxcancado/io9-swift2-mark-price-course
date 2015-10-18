@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="auto_layout_adv" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piq-Tx-X5Y">
+                                <rect key="frame" x="20" y="28" width="560" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.38403847302360672" blue="0.50137364671162687" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="CPb-wp-jew"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HA-MQ-AIR">
+                                <rect key="frame" x="20" y="164" width="276" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.47757657385955088" green="0.67311555789921917" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8aJ-oS-Tat"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XG-EY-dsO">
+                                <rect key="frame" x="304" y="164" width="276" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.86279250868448576" blue="0.13211821182779115" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="gT1-Br-cic"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rocket 2" translatesAutoresizingMaskIntoConstraints="NO" id="wct-MX-C9n">
+                                <rect key="frame" x="133" y="316" width="335" height="235"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wct-MX-C9n" secondAttribute="height" multiplier="67:47" id="fcA-fT-3wt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wct-MX-C9n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="8Ik-1l-Ots"/>
+                            <constraint firstItem="piq-Tx-X5Y" firstAttribute="width" secondItem="5XG-EY-dsO" secondAttribute="width" multiplier="2" constant="8" id="ET4-m2-QGL"/>
+                            <constraint firstItem="5XG-EY-dsO" firstAttribute="top" secondItem="piq-Tx-X5Y" secondAttribute="bottom" constant="8" id="H2g-Lz-STV"/>
+                            <constraint firstItem="9HA-MQ-AIR" firstAttribute="leading" secondItem="piq-Tx-X5Y" secondAttribute="leading" id="J80-08-iXS"/>
+                            <constraint firstItem="wct-MX-C9n" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="QdW-mZ-uIN"/>
+                            <constraint firstItem="9HA-MQ-AIR" firstAttribute="top" secondItem="piq-Tx-X5Y" secondAttribute="bottom" constant="8" id="WIX-cH-5zh"/>
+                            <constraint firstItem="piq-Tx-X5Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wmy-76-kUT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wct-MX-C9n" secondAttribute="bottom" constant="49" id="dBA-2t-QgS"/>
+                            <constraint firstItem="5XG-EY-dsO" firstAttribute="trailing" secondItem="piq-Tx-X5Y" secondAttribute="trailing" id="dOy-Xs-ozD"/>
+                            <constraint firstItem="piq-Tx-X5Y" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iUI-PS-Vpr"/>
+                            <constraint firstItem="piq-Tx-X5Y" firstAttribute="width" secondItem="9HA-MQ-AIR" secondAttribute="width" multiplier="2" constant="8" id="wr5-yg-2XL"/>
+                            <constraint firstItem="piq-Tx-X5Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zsd-nb-Glt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="380"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rocket 2" width="417" height="280"/>
+    </resources>
+</document>
