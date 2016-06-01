@@ -10,16 +10,75 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    // Properties
+    var maxTaps = 0
+    var currentTaps = 0
+    
+    // Outlets
+    @IBOutlet weak var tapperLogoImage: UIImageView!
+    @IBOutlet weak var howManyTapsText: UITextField!
+    @IBOutlet weak var playButton: UIButton!
+    
+    @IBOutlet weak var coinButton: UIButton!
+    @IBOutlet weak var tapsLabel: UILabel!
+    
+    @IBAction func onPlayButtonPressed(sender: UIButton!){
+        
+        if howManyTapsText.text != nil && howManyTapsText.text != "" {
+            
+            tapperLogoImage.hidden = true
+            howManyTapsText.hidden = true
+            playButton.hidden = true
+            
+            coinButton.hidden = false
+            tapsLabel.hidden = false
+            
+            
+            maxTaps = Int(howManyTapsText.text!)!
+            currentTaps = 0
+            
+            updateTapsLabel()
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func onCoinButtonPressed(sender: UIButton!){
+        currentTaps += 1
+        updateTapsLabel()
+        
+        if isGameOver(){
+            restartGame()
+        }
     }
-
+    
+    
+    
+    func updateTapsLabel() {
+        tapsLabel.text = "\(currentTaps) Taps"
+    }
+    
+    
+    
+    func isGameOver() -> Bool{
+        if currentTaps >= maxTaps {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    
+    func restartGame(){
+        maxTaps = 0
+        howManyTapsText.text = ""
+        currentTaps = 0
+        
+        tapperLogoImage.hidden = false
+        howManyTapsText.hidden = false
+        playButton.hidden = false
+        
+        coinButton.hidden = true
+        tapsLabel.hidden = true
+    }
 
 }
 
