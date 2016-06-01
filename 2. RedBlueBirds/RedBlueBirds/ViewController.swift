@@ -26,10 +26,12 @@ class ViewController: UIViewController {
     
     @IBAction func hideBlue(sender: AnyObject) {
         BlueBird.hidden = true
+        redBird.hidden = false
     }
    
     @IBAction func hideRed(sender: AnyObject) {
         redBird.hidden = true
+        BlueBird.hidden = false
     }
     
 }
