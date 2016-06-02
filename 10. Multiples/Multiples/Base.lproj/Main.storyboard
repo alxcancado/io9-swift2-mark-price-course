@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,33 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="gQN-vg-LBr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="gQN-vg-LBr" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="G9E-pk-Rcy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="G9E-pk-Rcy" userLabel="logo">
                                 <rect key="frame" x="180" y="28" width="239" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="31x-q2-vcM"/>
                                     <constraint firstAttribute="width" constant="239" id="FLF-kQ-OdN"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fG-yG-mlj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fG-yG-mlj" userLabel="playButton">
                                 <rect key="frame" x="229" y="392" width="141" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="141" id="bp0-qh-zZg"/>
                                     <constraint firstAttribute="height" constant="132" id="uf2-fT-VZY"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tNx-tX-r5R"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="XkP-d3-C2k">
-                                <rect key="frame" x="180" y="422" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="dAi-Vz-6Dh"/>
-                                    <constraint firstAttribute="height" constant="128" id="y9A-sY-GH4"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUN-j8-3Ug">
-                                <rect key="frame" x="186" y="319" width="228" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUN-j8-3Ug" userLabel="inputTextField">
+                                <rect key="frame" x="186" y="319" width="228" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="228" id="VrK-hW-7gg"/>
                                     <constraint firstAttribute="height" constant="45" id="cdS-2H-T2d"/>
@@ -53,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="45" id="hNo-Nj-UGm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="VrK-hW-7gg"/>
@@ -63,32 +60,46 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mib-Ky-G9X">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mib-Ky-G9X" userLabel="addButton">
                                 <rect key="frame" x="194" y="400" width="211" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="211" id="ODp-nZ-01I"/>
                                     <constraint firstAttribute="height" constant="101" id="pH7-0I-POm"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="onAddButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6Q-cO-9dl"/>
+                                </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 + 5 = 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-Cr-Rzm">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="press ADD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-Cr-Rzm" userLabel="resultsLabel">
                                 <rect key="frame" x="181" y="162" width="239" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="239" id="8XF-RA-j1F"/>
                                     <constraint firstAttribute="height" constant="82" id="soe-b9-9Mr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRD-wF-YN6" userLabel="backButton">
+                                <rect key="frame" x="157" y="28" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaf-zy-tSc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZRD-wF-YN6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1O9-GI-zN6"/>
                             <constraint firstItem="G9E-pk-Rcy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3I1-ZC-EYI"/>
                             <constraint firstItem="6fG-yG-mlj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Sw-jB-avk"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XkP-d3-C2k" secondAttribute="bottom" constant="80" id="92E-aC-kO6"/>
+                            <constraint firstItem="ZRD-wF-YN6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="106" id="6mn-Rh-5g5"/>
                             <constraint firstItem="MUN-j8-3Ug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AhZ-Mx-WLF"/>
-                            <constraint firstItem="XkP-d3-C2k" firstAttribute="top" secondItem="MUN-j8-3Ug" secondAttribute="bottom" constant="22" id="DV4-UR-Kwy"/>
+                            <constraint firstItem="ZRD-wF-YN6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="FRK-BM-EAO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mib-Ky-G9X" secondAttribute="bottom" constant="99" id="IhO-xb-q9e"/>
                             <constraint firstItem="6fG-yG-mlj" firstAttribute="top" secondItem="MUN-j8-3Ug" secondAttribute="bottom" constant="43" id="K6p-X6-MRC"/>
                             <constraint firstItem="MUN-j8-3Ug" firstAttribute="top" secondItem="AdJ-Cr-Rzm" secondAttribute="bottom" constant="75" id="Lji-4Z-I87"/>
@@ -98,17 +109,19 @@
                             <constraint firstItem="AdJ-Cr-Rzm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WN4-Us-tUh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6fG-yG-mlj" secondAttribute="bottom" constant="76" id="XZR-jY-LIm"/>
                             <constraint firstItem="MUN-j8-3Ug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bzO-ZR-dRO"/>
-                            <constraint firstItem="XkP-d3-C2k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mVx-Fe-KHv"/>
                             <constraint firstItem="gQN-vg-LBr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nkM-eu-ht4"/>
                             <constraint firstItem="gQN-vg-LBr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPf-Sl-NLj"/>
                             <constraint firstItem="Mib-Ky-G9X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ySM-yD-eHb"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="XkP-d3-C2k"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="Mib-Ky-G9X" id="Y6V-YS-Kv2"/>
+                        <outlet property="backButton" destination="ZRD-wF-YN6" id="nKl-23-nHU"/>
+                        <outlet property="inputTextField" destination="MUN-j8-3Ug" id="u0K-7x-dgb"/>
+                        <outlet property="logo" destination="G9E-pk-Rcy" id="SfW-lJ-X9h"/>
+                        <outlet property="playButton" destination="6fG-yG-mlj" id="Yl9-kY-i0X"/>
+                        <outlet property="resultsLabel" destination="AdJ-Cr-Rzm" id="9pu-cp-8z7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
