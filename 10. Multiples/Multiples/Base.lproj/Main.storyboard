@@ -63,6 +63,24 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mib-Ky-G9X">
+                                <rect key="frame" x="194" y="400" width="211" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="ODp-nZ-01I"/>
+                                    <constraint firstAttribute="height" constant="101" id="pH7-0I-POm"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 + 5 = 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-Cr-Rzm">
+                                <rect key="frame" x="181" y="162" width="239" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="8XF-RA-j1F"/>
+                                    <constraint firstAttribute="height" constant="82" id="soe-b9-9Mr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -71,15 +89,19 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XkP-d3-C2k" secondAttribute="bottom" constant="80" id="92E-aC-kO6"/>
                             <constraint firstItem="MUN-j8-3Ug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AhZ-Mx-WLF"/>
                             <constraint firstItem="XkP-d3-C2k" firstAttribute="top" secondItem="MUN-j8-3Ug" secondAttribute="bottom" constant="22" id="DV4-UR-Kwy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mib-Ky-G9X" secondAttribute="bottom" constant="99" id="IhO-xb-q9e"/>
                             <constraint firstItem="6fG-yG-mlj" firstAttribute="top" secondItem="MUN-j8-3Ug" secondAttribute="bottom" constant="43" id="K6p-X6-MRC"/>
+                            <constraint firstItem="MUN-j8-3Ug" firstAttribute="top" secondItem="AdJ-Cr-Rzm" secondAttribute="bottom" constant="75" id="Lji-4Z-I87"/>
                             <constraint firstItem="G9E-pk-Rcy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LpW-Q5-faj"/>
                             <constraint firstItem="MUN-j8-3Ug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFs-7z-IUi"/>
                             <constraint firstAttribute="bottom" secondItem="gQN-vg-LBr" secondAttribute="bottom" id="Rie-ku-3l1"/>
+                            <constraint firstItem="AdJ-Cr-Rzm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WN4-Us-tUh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6fG-yG-mlj" secondAttribute="bottom" constant="76" id="XZR-jY-LIm"/>
                             <constraint firstItem="MUN-j8-3Ug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bzO-ZR-dRO"/>
                             <constraint firstItem="XkP-d3-C2k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mVx-Fe-KHv"/>
                             <constraint firstItem="gQN-vg-LBr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nkM-eu-ht4"/>
                             <constraint firstItem="gQN-vg-LBr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPf-Sl-NLj"/>
+                            <constraint firstItem="Mib-Ky-G9X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ySM-yD-eHb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -95,6 +117,7 @@
     </scenes>
     <resources>
         <image name="MULTIPLES" width="533" height="124"/>
+        <image name="add" width="211" height="101"/>
         <image name="chalkboard" width="801" height="750"/>
         <image name="play" width="272" height="268"/>
     </resources>
