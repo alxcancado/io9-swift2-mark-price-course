@@ -18,11 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ot2-Lf-hI0">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Ot2-Lf-hI0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.38403847299999999" blue="0.50137364669999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="55d-sH-g3Q"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Mvo-JI-h5Z"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="eiv-S0-SrA"/>
+                                    <constraint firstAttribute="width" constant="600" id="hgJ-Fq-JbT"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uOV-8e-KoN">
@@ -107,6 +110,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
+                                        <variation key="widthClass=compact" axis="vertical"/>
                                         <variation key="heightClass=regular-widthClass=regular" axis="horizontal"/>
                                     </stackView>
                                 </subviews>
@@ -115,17 +119,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uOV-8e-KoN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0so-vq-OOi"/>
+                            <constraint firstItem="Ot2-Lf-hI0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4NB-Re-8aF"/>
                             <constraint firstAttribute="trailing" secondItem="uOV-8e-KoN" secondAttribute="trailing" constant="20" id="Raj-eP-HlG"/>
+                            <constraint firstItem="Ot2-Lf-hI0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UWm-Xc-oXj"/>
+                            <constraint firstItem="Ot2-Lf-hI0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UzR-pR-QFH"/>
+                            <constraint firstAttribute="trailing" secondItem="Ot2-Lf-hI0" secondAttribute="trailing" id="gkw-Pu-ty7"/>
+                            <constraint firstItem="Ot2-Lf-hI0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iGG-p1-CjK"/>
                             <constraint firstItem="Ot2-Lf-hI0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kw2-QK-u6A"/>
                             <constraint firstItem="uOV-8e-KoN" firstAttribute="top" secondItem="Ot2-Lf-hI0" secondAttribute="bottom" id="tIz-5i-0MG"/>
                             <constraint firstAttribute="bottom" secondItem="uOV-8e-KoN" secondAttribute="bottom" constant="20" id="txA-MM-Ra3"/>
                             <constraint firstItem="Ot2-Lf-hI0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yOy-m0-8Mz"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="yOy-m0-8Mz"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
