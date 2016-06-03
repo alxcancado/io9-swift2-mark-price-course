@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,59 +18,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYj-fx-Nmq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZYj-fx-Nmq" userLabel="backgroundImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpD-uf-dz5">
-                                <rect key="frame" x="96" y="20" width="408" height="187"/>
-                                <string key="text">Bacon ipsum dolor amet turkey jerky landjaeger biltong pastrami tail. Pig boudin tail turkey frankfurter tri-tip. Sirloin porchetta leberkas beef. Biltong andouille flank frankfurter swine doner picanha boudin alcatra porchetta turkey beef ribs pork belly. Kielbasa turkey strip steak landjaeger bacon pork belly. Tongue beef landjaeger, chuck frankfurter meatball venison shankle drumstick pork belly tail porchetta salami flank swine.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpD-uf-dz5" userLabel="baconIpsumLabel">
+                                <rect key="frame" x="-234" y="290" width="1068" height="21"/>
+                                <string key="text">Bacon ipsum dolor amet turkey jerky landjaeger biltong pastrami tail. Pig boudin tail turkey frankfurter tri-tip. Sirloin porchetta leberkas beef.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="DLW-St-bw4">
-                                <rect key="frame" x="180" y="215" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="DLW-St-bw4" userLabel="circleLogo">
+                                <rect key="frame" x="204" y="221" width="192" height="159"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeZ-d0-xLM">
-                                <rect key="frame" x="96" y="373" width="128" height="128"/>
-                                <state key="normal" image="post">
-                                    <color key="titleColor" red="0.1244482553" green="1" blue="0.72866298230000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNi-wL-ApT">
-                                <rect key="frame" x="236" y="373" width="128" height="128"/>
-                                <state key="normal" image="heart">
-                                    <color key="titleColor" red="0.1244482553" green="1" blue="0.72866298230000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-dO-Jin">
-                                <rect key="frame" x="376" y="373" width="128" height="128"/>
-                                <state key="normal" image="inbox">
-                                    <color key="titleColor" red="0.1244482553" green="1" blue="0.72866298230000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwx-XV-ZgC">
-                                <rect key="frame" x="269" y="509" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-Sq-SRU">
-                                <rect key="frame" x="409" y="509" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voN-Op-8xW">
-                                <rect key="frame" x="139" y="509" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="dZl-hA-ePD">
+                                <rect key="frame" x="20" y="392" width="560" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="64" verticalHuggingPriority="64" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q8g-vU-dXP">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeZ-d0-xLM" userLabel="PostButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="B2U-Ct-LO8"/>
+                                                    <constraint firstAttribute="height" constant="64" id="ijP-gY-PS9"/>
+                                                </constraints>
+                                                <state key="normal" image="post">
+                                                    <color key="titleColor" red="0.1244482553" green="1" blue="0.72866298230000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voN-Op-8xW" userLabel="PostLabel">
+                                                <rect key="frame" x="0.0" y="64" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sMO-JV-gsc">
+                                        <rect key="frame" x="248" y="0.0" width="64" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNi-wL-ApT" userLabel="FavoriteButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="HfL-jW-Lar"/>
+                                                    <constraint firstAttribute="width" constant="64" id="fTF-w2-4xw"/>
+                                                </constraints>
+                                                <state key="normal" image="heart">
+                                                    <color key="titleColor" red="0.1244482553" green="1" blue="0.72866298230000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwx-XV-ZgC" userLabel="FavoriteLabel">
+                                                <rect key="frame" x="0.0" y="64" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cfq-oz-g8y">
+                                        <rect key="frame" x="496" y="0.0" width="64" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-dO-Jin" userLabel="MailButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="HUv-8l-hEt"/>
+                                                    <constraint firstAttribute="width" constant="64" id="v1W-f8-hSb"/>
+                                                </constraints>
+                                                <state key="normal" image="inbox">
+                                                    <color key="titleColor" red="0.1244482553" green="1" blue="0.72866298230000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-Sq-SRU" userLabel="MailLabel">
+                                                <rect key="frame" x="0.0" y="64" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="9PP-dO-Jin" secondAttribute="trailing" constant="20" id="RuO-3v-9YB"/>
+                                            <constraint firstAttribute="trailing" secondItem="9PP-dO-Jin" secondAttribute="trailing" constant="20" id="mp0-oA-FpL"/>
+                                            <constraint firstAttribute="trailing" secondItem="rhO-Sq-SRU" secondAttribute="trailing" constant="20" id="qB9-mD-u76"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="mp0-oA-FpL"/>
+                                                <exclude reference="qB9-mD-u76"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cfq-oz-g8y" secondAttribute="trailing" constant="20" id="E3a-Og-q2H"/>
+                                    <constraint firstItem="q8g-vU-dXP" firstAttribute="leading" secondItem="dZl-hA-ePD" secondAttribute="leading" constant="20" id="Jpf-Rr-LYQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="cfq-oz-g8y" secondAttribute="bottom" constant="20" id="Jwr-mD-eAl"/>
+                                    <constraint firstAttribute="bottom" secondItem="sMO-JV-gsc" secondAttribute="bottom" constant="20" id="Xre-1y-k8g"/>
+                                    <constraint firstAttribute="bottom" secondItem="q8g-vU-dXP" secondAttribute="bottom" constant="20" id="kxY-Ao-hqZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="cfq-oz-g8y" secondAttribute="trailing" constant="20" id="oyH-Yh-D99"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jpf-Rr-LYQ"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dZl-hA-ePD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3cq-ON-xNF"/>
+                            <constraint firstItem="dZl-hA-ePD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="4nf-eV-R7r"/>
+                            <constraint firstAttribute="bottom" secondItem="dZl-hA-ePD" secondAttribute="bottom" id="5L2-om-gpt"/>
+                            <constraint firstItem="dZl-hA-ePD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="Le3-jO-WHS"/>
+                            <constraint firstItem="dZl-hA-ePD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N5V-tS-PCy"/>
+                            <constraint firstItem="dpD-uf-dz5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O9j-0s-AD2"/>
+                            <constraint firstAttribute="trailing" secondItem="dZl-hA-ePD" secondAttribute="trailing" id="PwU-z6-w3E"/>
+                            <constraint firstAttribute="bottom" secondItem="ZYj-fx-Nmq" secondAttribute="bottom" id="RBL-aF-gy8"/>
+                            <constraint firstItem="ZYj-fx-Nmq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TDe-dM-k3I"/>
+                            <constraint firstItem="dZl-hA-ePD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bBr-o8-Z6l"/>
+                            <constraint firstItem="dpD-uf-dz5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bUl-NU-REb"/>
+                            <constraint firstAttribute="trailing" secondItem="dpD-uf-dz5" secondAttribute="trailing" id="cXB-Jx-BjU"/>
+                            <constraint firstAttribute="trailing" secondItem="9PP-dO-Jin" secondAttribute="trailing" id="d44-5d-jVV"/>
+                            <constraint firstAttribute="trailing" secondItem="dZl-hA-ePD" secondAttribute="trailing" id="dKG-M2-RGt"/>
+                            <constraint firstItem="ZYj-fx-Nmq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dkK-w5-BOC"/>
+                            <constraint firstAttribute="trailing" secondItem="ZYj-fx-Nmq" secondAttribute="trailing" id="qEh-hE-5cl"/>
+                            <constraint firstItem="dZl-hA-ePD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rYZ-4C-CaH"/>
+                            <constraint firstItem="DLW-St-bw4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rd4-jr-xVQ"/>
+                            <constraint firstItem="DLW-St-bw4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tGL-50-MSL"/>
+                            <constraint firstAttribute="trailing" secondItem="dZl-hA-ePD" secondAttribute="trailing" constant="20" id="whs-3K-qZA"/>
+                            <constraint firstItem="dZl-hA-ePD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yK6-Ek-hhs"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
