@@ -28,3 +28,15 @@ for x in oddNumbers {
 
 print (sums)
 
+var result = 0
+var count = 0
+repeat {
+    result += count
+    count += 1
+} while count <= 5
+
+print(result)
+
+
+
+
