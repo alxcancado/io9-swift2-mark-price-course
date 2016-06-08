@@ -9,9 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var player1: Character
+    var player2: Character
+    var message: String
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        player1 = Character(hp: 100, attack: 10, name: "Player 1")
+        player2 = Character(hp: 100, attack: 10, name: "Player 2")
+        
         
     }
 
