@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="46" id="3zs-sg-Bcy"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-xb-Mwu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-xb-Mwu" customClass="MonsterImage" customModule="pokepet" customModuleProvider="target">
                                 <rect key="frame" x="-70" y="39" width="697" height="591"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="697" id="AHx-qY-zm8"/>
@@ -160,6 +160,9 @@
                         <outlet property="foodImage" destination="4JR-Ly-t5F" id="KVQ-yc-ptW"/>
                         <outlet property="heartImage" destination="Dhi-8e-0O6" id="A7a-8Y-OvG"/>
                         <outlet property="monsterImage" destination="ZNt-xb-Mwu" id="kZi-t2-Z07"/>
+                        <outlet property="skull1" destination="GfV-0j-7Qg" id="6Qe-d0-Unc"/>
+                        <outlet property="skull2" destination="kbM-da-8U2" id="tE4-Br-zLY"/>
+                        <outlet property="skull3" destination="CYa-y8-CJX" id="anf-sw-v9Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
