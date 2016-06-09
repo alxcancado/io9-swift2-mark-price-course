@@ -98,6 +98,9 @@
                             <constraint firstAttribute="trailing" secondItem="WQ6-kr-oa9" secondAttribute="trailing" id="x5G-PD-pTi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="monsterImage" destination="ZNt-xb-Mwu" id="kZi-t2-Z07"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
