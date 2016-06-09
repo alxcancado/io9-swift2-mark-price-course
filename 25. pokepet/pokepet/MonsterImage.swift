@@ -47,8 +47,8 @@ class MonsterImage: UIImageView {
     
     func playDeathAnimation(){
         
-        self.image = UIImage(named: "dead6.png")
         self.animationImages = nil
+        self.image = UIImage(named: "dead5.png")
         
         var imageArray = [UIImage]()
         
