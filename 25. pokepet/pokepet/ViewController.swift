@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var monsterImage: UIImageView!
+    @IBOutlet weak var foodImage: DragImage!
+    @IBOutlet weak var heartImage: DragImage!
     
     
     override func viewDidLoad() {
@@ -28,9 +30,7 @@ class ViewController: UIViewController {
         monsterImage.animationRepeatCount = 0
         monsterImage.startAnimating()
         
-    
     }
-
 
 }
 
