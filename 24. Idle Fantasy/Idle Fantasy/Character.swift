@@ -27,6 +27,7 @@ class Character {
         get {
             return _hp
         }
+        
     }
     
     var attack: Int {
@@ -53,8 +54,8 @@ class Character {
     }
     
     // actions
-    func attack (attack: Int) -> Bool {
-        self._hp -= attack
+    func attack (attack: Int, who: Character) -> Bool {
+        who._hp -= attack
         return true
     }
 }
