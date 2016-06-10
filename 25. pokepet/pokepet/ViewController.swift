@@ -24,6 +24,12 @@ class ViewController: UIViewController {
     var penalties = 0
     var timer: NSTimer!
     
+    var monsterHappy = false
+    var currentItem: UInt32 = 0
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +45,15 @@ class ViewController: UIViewController {
     }
     
     func itemDroppedOnCharacter(notif: AnyObject){
-        print("ITEM DROPPED ON CHARACTER")
+        //print("ITEM DROPPED ON CHARACTER")
+        monsterHappy = true
+        startTimer()
+        
+        foodImage.alpha = DIM_APLHA
+        foodImage.userInteractionEnabled = false
+        heartImage.alpha = DIM_APLHA
+        heartImage.userInteractionEnabled = false
+        
     }
     
     func startTimer(){
@@ -52,24 +66,46 @@ class ViewController: UIViewController {
     
     func changeGameState(){
         
-        penalties += 1
+        if !monsterHappy {
+            
+            penalties += 1
+            
+            if penalties == 1 {
+                skull1.alpha = OPAQUE
+            } else if penalties == 2 {
+                skull2.alpha = OPAQUE
+            } else if penalties == 3 {
+                skull3.alpha = OPAQUE
+            } else {
+                skull1.alpha = DIM_APLHA
+                skull2.alpha = DIM_APLHA
+                skull3.alpha = DIM_APLHA
+            }
+            
+            if penalties >= MAX_PENALTIES {
+                gameOver()
+            }
+        }
         
-        if penalties == 1 {
-            skull1.alpha = OPAQUE
-        } else if penalties == 2 {
-            skull2.alpha = OPAQUE
-        } else if penalties == 3 {
-            skull3.alpha = OPAQUE
+        let random = arc4random_uniform(2) // 0 or 1
+        
+        if random == 0 {
+            foodImage.alpha = DIM_APLHA
+            foodImage.userInteractionEnabled = false
+            
+            heartImage.alpha = OPAQUE
+            heartImage.userInteractionEnabled = true
         } else {
-            skull1.alpha = DIM_APLHA
-            skull2.alpha = DIM_APLHA
-            skull3.alpha = DIM_APLHA
+            heartImage.alpha = DIM_APLHA
+            heartImage.userInteractionEnabled = false
+            
+            foodImage.alpha = OPAQUE
+            foodImage.userInteractionEnabled = true
         }
         
-        if penalties >= MAX_PENALTIES {
-            gameOver()
-        }
-    
+        currentItem = random
+        monsterHappy = false
+        
     }
     
     func gameOver(){
