@@ -120,7 +120,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 64AA33C41D0A013900919CFF /* Build configuration list for PBXProject "pokepet" */;
+			buildConfigurationList = 64AA33C41D0A013900919CFF /* Build configuration list for PBXProject "petmon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -300,7 +300,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64AA33C41D0A013900919CFF /* Build configuration list for PBXProject "pokepet" */ = {
+		64AA33C41D0A013900919CFF /* Build configuration list for PBXProject "petmon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64AA33D91D0A013900919CFF /* Debug */,
