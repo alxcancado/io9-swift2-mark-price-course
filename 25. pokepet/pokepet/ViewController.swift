@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var monsterImage: MonsterImage!
     @IBOutlet weak var foodImage: DragImage!
     @IBOutlet weak var heartImage: DragImage!
+    //@IBOutlet weak var otherImage:DragImage!
+    
     @IBOutlet weak var skull1: UIImageView!
     @IBOutlet weak var skull2: UIImageView!
     @IBOutlet weak var skull3: UIImageView!
@@ -27,21 +30,59 @@ class ViewController: UIViewController {
     var monsterHappy = false
     var currentItem: UInt32 = 0
     
-    
+    var musicPlayer: AVAudioPlayer!
+    var sfxBite: AVAudioPlayer!
+    var sfxHeart: AVAudioPlayer!
+    var sfxDeath: AVAudioPlayer!
+    var sfxSkull: AVAudioPlayer!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initGame()
         
+    }
+    
+    func initGame() {
         foodImage.dropTarget = monsterImage
         heartImage.dropTarget = monsterImage
+        //otherImage.dropTarget = monsterImage
+        
         skull1.alpha = DIM_APLHA
         skull2.alpha = DIM_APLHA
         skull3.alpha = DIM_APLHA
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.itemDroppedOnCharacter(_:)), name: "onTargetDropped", object: nil)
+        
+        do {
+            let resourcePath = NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")
+            let url = NSURL(fileURLWithPath: resourcePath!)
+            try musicPlayer = AVAudioPlayer(contentsOfURL: url)
+            
+            //try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
+            
+            try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
+            
+            try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
+            
+            try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
+            
+            try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
+            
+            musicPlayer.prepareToPlay()
+            musicPlayer.play()
+            
+            sfxBite.prepareToPlay()
+            sfxHeart.prepareToPlay()
+            sfxDeath.prepareToPlay()
+            sfxSkull.prepareToPlay()
+            
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }
         
         startTimer()
+        
     }
     
     func itemDroppedOnCharacter(notif: AnyObject){
@@ -53,7 +94,16 @@ class ViewController: UIViewController {
         foodImage.userInteractionEnabled = false
         heartImage.alpha = DIM_APLHA
         heartImage.userInteractionEnabled = false
+        //otherImage.alpha = DIM_APLHA
+        //otherImage.userInteractionEnabled = false
         
+        if currentItem == 0 {
+            sfxHeart.play()
+        } else if currentItem == 1{
+            sfxBite.play()
+        } else {
+            sfxBite.play()
+        }
     }
     
     func startTimer(){
@@ -69,6 +119,7 @@ class ViewController: UIViewController {
         if !monsterHappy {
             
             penalties += 1
+            sfxSkull.play()
             
             if penalties == 1 {
                 skull1.alpha = OPAQUE
@@ -95,13 +146,29 @@ class ViewController: UIViewController {
             
             heartImage.alpha = OPAQUE
             heartImage.userInteractionEnabled = true
-        } else {
+            
+            //otherImage.alpha = DIM_APLHA
+            //otherImage.userInteractionEnabled = false
+            
+        } else if random == 1 {
             heartImage.alpha = DIM_APLHA
             heartImage.userInteractionEnabled = false
             
             foodImage.alpha = OPAQUE
             foodImage.userInteractionEnabled = true
-        }
+            
+            //otherImage.alpha = DIM_APLHA
+            //otherImage.userInteractionEnabled = false
+        } //else {
+//            heartImage.alpha = DIM_APLHA
+//            heartImage.userInteractionEnabled = false
+//            
+//            foodImage.alpha = DIM_APLHA
+//            foodImage.userInteractionEnabled = false
+            
+            //otherImage.alpha = OPAQUE
+            //otherImage.userInteractionEnabled = true
+        //}
         
         currentItem = random
         monsterHappy = false
@@ -113,7 +180,8 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
         monsterImage.playDeathAnimation()
+        sfxDeath.play()
     }
-
+    
 }
 
