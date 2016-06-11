@@ -40,10 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initGame()
-<<<<<<< HEAD
-=======
         
->>>>>>> devfeatures
     }
     
     func initGame() {
@@ -84,39 +81,8 @@ class ViewController: UIViewController {
             print(error.debugDescription)
         }
         
-        do {
-            let resourcePath = NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")
-            let url = NSURL(fileURLWithPath: resourcePath!)
-            try musicPlayer = AVAudioPlayer(contentsOfURL: url)
-            
-            try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
-            
-            try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
-            
-            try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
-            
-            try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
-            
-            try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
-            
-            musicPlayer.prepareToPlay()
-            musicPlayer.play()
-            
-            sfxBite.prepareToPlay()
-            sfxHeart.prepareToPlay()
-            sfxDeath.prepareToPlay()
-            sfxSkull.prepareToPlay()
-            
-        } catch let error as NSError {
-            print(error.debugDescription)
-        }
-        
         startTimer()
-<<<<<<< HEAD
-
-=======
         
->>>>>>> devfeatures
     }
     
     func itemDroppedOnCharacter(notif: AnyObject){
@@ -133,11 +99,8 @@ class ViewController: UIViewController {
         
         if currentItem == 0 {
             sfxHeart.play()
-<<<<<<< HEAD
-=======
         } else if currentItem == 1{
             sfxBite.play()
->>>>>>> devfeatures
         } else {
             sfxBite.play()
         }
