@@ -27,14 +27,14 @@
                                     <constraint firstAttribute="height" constant="46" id="3zs-sg-Bcy"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-xb-Mwu" customClass="MonsterImage" customModule="pokepet" customModuleProvider="target">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-xb-Mwu" customClass="MonsterImage" customModule="pokepet" customModuleProvider="target">
                                 <rect key="frame" x="-70" y="39" width="697" height="591"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="697" id="AHx-qY-zm8"/>
                                     <constraint firstAttribute="height" constant="591" id="ah2-1c-hSr"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livespanel" translatesAutoresizingMaskIntoConstraints="NO" id="kK1-sV-OfU">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livespanel" translatesAutoresizingMaskIntoConstraints="NO" id="kK1-sV-OfU">
                                 <rect key="frame" x="180" y="20" width="240" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="NMx-kt-m5r"/>
@@ -44,7 +44,7 @@
                                     <rect key="frame" x="180" y="20" width="240" height="16"/>
                                 </variation>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Tfk-r7-oNw">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Tfk-r7-oNw">
                                 <rect key="frame" x="205" y="32" width="182" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="GfV-0j-7Qg">
@@ -73,7 +73,7 @@
                                     <rect key="frame" x="209" y="28" width="182" height="50"/>
                                 </variation>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t50-oU-KlY">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t50-oU-KlY">
                                 <rect key="frame" x="155" y="90" width="308" height="50"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-8e-0O6" customClass="DragImage" customModule="pokepet" customModuleProvider="target">
@@ -120,6 +120,29 @@
                                     <action selector="onRestartPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PA-YG-aas"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pokepet_color" translatesAutoresizingMaskIntoConstraints="NO" id="WyT-81-ymE">
+                                <rect key="frame" x="132" y="28" width="355" height="241"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="PyY-aA-fYl"/>
+                                    <constraint firstAttribute="height" constant="241" id="Zbd-gr-VWB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PyY-aA-fYl"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLA-OV-ekb" userLabel="PlayButton">
+                                <rect key="frame" x="245" y="236" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dGn-EO-e10"/>
+                                    <constraint firstAttribute="width" constant="128" id="mWa-ew-v4B"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="onRestartPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="PNJ-8g-FEt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -128,9 +151,11 @@
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2rh-El-GSR"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZNt-xb-Mwu" secondAttribute="bottom" constant="-30" id="60e-8d-VVD"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6GG-9Z-Roh"/>
+                            <constraint firstItem="dLA-OV-ekb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8FE-Fj-K8w"/>
                             <constraint firstItem="oHX-Kd-6zE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9fX-bY-gM0"/>
                             <constraint firstItem="kK1-sV-OfU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="APT-Cy-rMV"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Bsz-dx-JXN"/>
+                            <constraint firstItem="WyT-81-ymE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Dr9-hr-tyE"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="kK1-sV-OfU" secondAttribute="bottom" constant="40" id="Eck-AW-D38"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t50-oU-KlY" secondAttribute="trailing" constant="-1" id="Eeh-ef-3It"/>
                             <constraint firstItem="H4y-eq-DUH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FKr-UE-q5A"/>
@@ -138,19 +163,23 @@
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ifn-Ca-tjX"/>
                             <constraint firstItem="8pJ-ie-LiH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MxG-1h-2sb"/>
                             <constraint firstItem="Tfk-r7-oNw" firstAttribute="centerX" secondItem="kK1-sV-OfU" secondAttribute="centerX" id="TLA-7J-5Be"/>
+                            <constraint firstItem="WyT-81-ymE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V3I-rl-fX7"/>
                             <constraint firstItem="oHX-Kd-6zE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XJ3-Jl-06h"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WQ6-kr-oa9" secondAttribute="bottom" id="Ykq-ds-Rul"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZHc-Vd-IDV"/>
                             <constraint firstItem="Tfk-r7-oNw" firstAttribute="centerY" secondItem="kK1-sV-OfU" secondAttribute="centerY" id="aKf-RZ-96o"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oHX-Kd-6zE" secondAttribute="bottom" id="am3-Gy-Xrv"/>
                             <constraint firstItem="8pJ-ie-LiH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eeI-gx-O3I"/>
+                            <constraint firstItem="WyT-81-ymE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-10" id="f1D-fe-XYy"/>
                             <constraint firstItem="kK1-sV-OfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gNj-u6-pOd"/>
                             <constraint firstItem="WQ6-kr-oa9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="huy-8Z-mhv"/>
                             <constraint firstAttribute="trailing" secondItem="H4y-eq-DUH" secondAttribute="trailing" id="kRd-4V-YJq"/>
                             <constraint firstItem="WQ6-kr-oa9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sG5-Qf-Ers"/>
                             <constraint firstItem="ZNt-xb-Mwu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-90" id="tCP-pp-pON"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="Tfk-r7-oNw" secondAttribute="bottom" constant="8" id="tEy-cE-OFW"/>
+                            <constraint firstItem="dLA-OV-ekb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vVs-6G-6xj"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w7K-w2-RDI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WyT-81-ymE" secondAttribute="trailing" constant="8" id="wrU-9p-rzL"/>
                             <constraint firstAttribute="trailing" secondItem="WQ6-kr-oa9" secondAttribute="trailing" id="x5G-PD-pTi"/>
                         </constraints>
                         <variation key="default">
@@ -209,6 +238,8 @@
         <image name="heart" width="95" height="98"/>
         <image name="idle1" width="889" height="615"/>
         <image name="livespanel" width="468" height="137"/>
+        <image name="play" width="128" height="128"/>
+        <image name="pokepet_color" width="506" height="184"/>
         <image name="restart" width="128" height="128"/>
         <image name="shader" width="960" height="640"/>
         <image name="skull" width="95" height="98"/>
