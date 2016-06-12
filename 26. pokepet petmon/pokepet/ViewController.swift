@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterImage: MonsterImage!
     @IBOutlet weak var foodImage: DragImage!
     @IBOutlet weak var heartImage: DragImage!
-    //@IBOutlet weak var otherImage:DragImage!
+    @IBOutlet weak var otherImage:DragImage!
     
     @IBOutlet weak var skull1: UIImageView!
     @IBOutlet weak var skull2: UIImageView!

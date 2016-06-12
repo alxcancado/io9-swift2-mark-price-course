@@ -19,11 +19,6 @@
 		64AA33D71D0A013900919CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64AA33D51D0A013900919CFF /* LaunchScreen.storyboard */; };
 		64AA33DF1D0A159800919CFF /* DragImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA33DE1D0A159800919CFF /* DragImage.swift */; };
 		64AA33E11D0A198600919CFF /* MonsterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA33E01D0A198600919CFF /* MonsterImage.swift */; };
-		64AA33E71D0A5A3F00919CFF /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64AA33E21D0A5A3F00919CFF /* bite.wav */; };
-		64AA33E81D0A5A3F00919CFF /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64AA33E31D0A5A3F00919CFF /* cave-music.mp3 */; };
-		64AA33E91D0A5A3F00919CFF /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64AA33E41D0A5A3F00919CFF /* death.wav */; };
-		64AA33EA1D0A5A3F00919CFF /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64AA33E51D0A5A3F00919CFF /* heart.wav */; };
-		64AA33EB1D0A5A3F00919CFF /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64AA33E61D0A5A3F00919CFF /* skull.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +36,6 @@
 		64AA33D81D0A013900919CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64AA33DE1D0A159800919CFF /* DragImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImage.swift; sourceTree = "<group>"; };
 		64AA33E01D0A198600919CFF /* MonsterImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImage.swift; sourceTree = "<group>"; };
-		64AA33E21D0A5A3F00919CFF /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
-		64AA33E31D0A5A3F00919CFF /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
-		64AA33E41D0A5A3F00919CFF /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
-		64AA33E51D0A5A3F00919CFF /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
-		64AA33E61D0A5A3F00919CFF /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +79,6 @@
 				64AA33D01D0A013900919CFF /* Main.storyboard */,
 				64AA33D31D0A013900919CFF /* Assets.xcassets */,
 				64AA33D51D0A013900919CFF /* LaunchScreen.storyboard */,
-				64AA33E21D0A5A3F00919CFF /* bite.wav */,
-				64AA33E31D0A5A3F00919CFF /* cave-music.mp3 */,
-				64AA33E41D0A5A3F00919CFF /* death.wav */,
-				64AA33E51D0A5A3F00919CFF /* heart.wav */,
-				64AA33E61D0A5A3F00919CFF /* skull.wav */,
 				64AA33D81D0A013900919CFF /* Info.plist */,
 				64AA33E01D0A198600919CFF /* MonsterImage.swift */,
 			);
@@ -158,19 +143,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				64AA33EB1D0A5A3F00919CFF /* skull.wav in Resources */,
-				64AA33E71D0A5A3F00919CFF /* bite.wav in Resources */,
-				64AA33E91D0A5A3F00919CFF /* death.wav in Resources */,
-				64AA33EA1D0A5A3F00919CFF /* heart.wav in Resources */,
-				64AA33E81D0A5A3F00919CFF /* cave-music.mp3 in Resources */,
-=======
 				64A3C01D1D0A9362007C1ACB /* skull.wav in Resources */,
 				64A3C0191D0A9362007C1ACB /* bite.wav in Resources */,
 				64A3C01B1D0A9362007C1ACB /* death.wav in Resources */,
 				64A3C01C1D0A9362007C1ACB /* heart.wav in Resources */,
 				64A3C01A1D0A9362007C1ACB /* cave-music.mp3 in Resources */,
->>>>>>> devfeatures
 				64AA33D71D0A013900919CFF /* LaunchScreen.storyboard in Resources */,
 				64AA33D41D0A013900919CFF /* Assets.xcassets in Resources */,
 				64AA33D21D0A013900919CFF /* Main.storyboard in Resources */,
