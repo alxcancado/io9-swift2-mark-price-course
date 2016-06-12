@@ -106,13 +106,29 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shader" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-Kd-6zE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pJ-ie-LiH" userLabel="RestartButton">
+                                <rect key="frame" x="245" y="236" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="qEK-dg-IIU"/>
+                                    <constraint firstAttribute="width" constant="128" id="u9d-mR-3xI"/>
+                                </constraints>
+                                <state key="normal" image="restart"/>
+                                <connections>
+                                    <action selector="onRestartPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PA-YG-aas"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oHX-Kd-6zE" secondAttribute="trailing" id="00j-Dw-YtP"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="Tfk-r7-oNw" secondAttribute="bottom" constant="8" id="0DD-ne-QlG"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2rh-El-GSR"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZNt-xb-Mwu" secondAttribute="bottom" constant="-30" id="60e-8d-VVD"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6GG-9Z-Roh"/>
+                            <constraint firstItem="oHX-Kd-6zE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9fX-bY-gM0"/>
                             <constraint firstItem="kK1-sV-OfU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="APT-Cy-rMV"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Bsz-dx-JXN"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="kK1-sV-OfU" secondAttribute="bottom" constant="40" id="Eck-AW-D38"/>
@@ -120,10 +136,14 @@
                             <constraint firstItem="H4y-eq-DUH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FKr-UE-q5A"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H4y-eq-DUH" secondAttribute="bottom" id="Grr-4Z-oVM"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ifn-Ca-tjX"/>
+                            <constraint firstItem="8pJ-ie-LiH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MxG-1h-2sb"/>
                             <constraint firstItem="Tfk-r7-oNw" firstAttribute="centerX" secondItem="kK1-sV-OfU" secondAttribute="centerX" id="TLA-7J-5Be"/>
+                            <constraint firstItem="oHX-Kd-6zE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XJ3-Jl-06h"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WQ6-kr-oa9" secondAttribute="bottom" id="Ykq-ds-Rul"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZHc-Vd-IDV"/>
                             <constraint firstItem="Tfk-r7-oNw" firstAttribute="centerY" secondItem="kK1-sV-OfU" secondAttribute="centerY" id="aKf-RZ-96o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oHX-Kd-6zE" secondAttribute="bottom" id="am3-Gy-Xrv"/>
+                            <constraint firstItem="8pJ-ie-LiH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eeI-gx-O3I"/>
                             <constraint firstItem="kK1-sV-OfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gNj-u6-pOd"/>
                             <constraint firstItem="WQ6-kr-oa9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="huy-8Z-mhv"/>
                             <constraint firstAttribute="trailing" secondItem="H4y-eq-DUH" secondAttribute="trailing" id="kRd-4V-YJq"/>
@@ -169,6 +189,8 @@
                         <outlet property="heartImage" destination="Dhi-8e-0O6" id="A7a-8Y-OvG"/>
                         <outlet property="monsterImage" destination="ZNt-xb-Mwu" id="kZi-t2-Z07"/>
                         <outlet property="potionImage" destination="znB-Fx-yc7" id="sLL-J3-wcK"/>
+                        <outlet property="restartButton" destination="8pJ-ie-LiH" id="quH-KM-Zaw"/>
+                        <outlet property="shadowImage" destination="oHX-Kd-6zE" id="dYO-Hj-1nf"/>
                         <outlet property="skull1" destination="GfV-0j-7Qg" id="6Qe-d0-Unc"/>
                         <outlet property="skull2" destination="kbM-da-8U2" id="tE4-Br-zLY"/>
                         <outlet property="skull3" destination="CYa-y8-CJX" id="anf-sw-v9Z"/>
@@ -187,6 +209,8 @@
         <image name="heart" width="95" height="98"/>
         <image name="idle1" width="889" height="615"/>
         <image name="livespanel" width="468" height="137"/>
+        <image name="restart" width="128" height="128"/>
+        <image name="shader" width="960" height="640"/>
         <image name="skull" width="95" height="98"/>
     </resources>
 </document>

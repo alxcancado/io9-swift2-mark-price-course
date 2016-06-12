@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var foodImage: DragImage!
     @IBOutlet weak var heartImage: DragImage!
     @IBOutlet weak var potionImage:DragImage!
+    @IBOutlet weak var shadowImage: UIImageView!
+    @IBOutlet weak var restartButton: UIButton!
     
     @IBOutlet weak var skull1: UIImageView!
     @IBOutlet weak var skull2: UIImageView!
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
     var sfxDeath: AVAudioPlayer!
     var sfxSkull: AVAudioPlayer!
     var sfxPotion: AVAudioPlayer!
+    var gameOverMusic: AVAudioPlayer!
     
     
     override func viewDidLoad() {
@@ -60,7 +63,7 @@ class ViewController: UIViewController {
             let url = NSURL(fileURLWithPath: resourcePath!)
             try musicPlayer = AVAudioPlayer(contentsOfURL: url)
             
-            //try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
+            try gameOverMusic = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("game_over", ofType: "mp3")!))
             
             try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
             
@@ -80,6 +83,7 @@ class ViewController: UIViewController {
             sfxDeath.prepareToPlay()
             sfxSkull.prepareToPlay()
             sfxPotion.prepareToPlay()
+            gameOverMusic.prepareToPlay()
             
         } catch let error as NSError {
             print(error.debugDescription)
@@ -185,6 +189,21 @@ class ViewController: UIViewController {
         }
         monsterImage.playDeathAnimation()
         sfxDeath.play()
+        musicPlayer.stop()
+        gameOverMusic.play()
+        shadowImage.hidden = false
+        restartButton.hidden = false
+    }
+    
+    @IBAction func onRestartPressed(){
+        shadowImage.hidden = true
+        restartButton.hidden = true
+        musicPlayer.stop()
+        gameOverMusic.stop()
+        penalties = 0
+        monsterImage.playIdleAnimation()
+        initGame()
+        
     }
     
 }
