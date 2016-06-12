@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		643D3A311D0D1C28006F112F /* bottle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 643D3A301D0D1C28006F112F /* bottle.wav */; };
 		643D3A331D0D2A7C006F112F /* game_over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 643D3A321D0D2A7C006F112F /* game_over.mp3 */; };
+		643D3A351D0D3B0E006F112F /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 643D3A341D0D3B0E006F112F /* button.wav */; };
 		64A3C0191D0A9362007C1ACB /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64A3C0141D0A9362007C1ACB /* bite.wav */; };
 		64A3C01A1D0A9362007C1ACB /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64A3C0151D0A9362007C1ACB /* cave-music.mp3 */; };
 		64A3C01B1D0A9362007C1ACB /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64A3C0161D0A9362007C1ACB /* death.wav */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		643D3A301D0D1C28006F112F /* bottle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bottle.wav; sourceTree = "<group>"; };
 		643D3A321D0D2A7C006F112F /* game_over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_over.mp3; sourceTree = "<group>"; };
+		643D3A341D0D3B0E006F112F /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
 		64A3C0141D0A9362007C1ACB /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
 		64A3C0151D0A9362007C1ACB /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
 		64A3C0161D0A9362007C1ACB /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				64A3C0171D0A9362007C1ACB /* heart.wav */,
 				64A3C0181D0A9362007C1ACB /* skull.wav */,
 				643D3A321D0D2A7C006F112F /* game_over.mp3 */,
+				643D3A341D0D3B0E006F112F /* button.wav */,
 				64AA33CC1D0A013900919CFF /* AppDelegate.swift */,
 				64AA33CE1D0A013900919CFF /* ViewController.swift */,
 				64AA33DE1D0A159800919CFF /* DragImage.swift */,
@@ -154,6 +157,7 @@
 				643D3A331D0D2A7C006F112F /* game_over.mp3 in Resources */,
 				64A3C01B1D0A9362007C1ACB /* death.wav in Resources */,
 				64A3C01C1D0A9362007C1ACB /* heart.wav in Resources */,
+				643D3A351D0D3B0E006F112F /* button.wav in Resources */,
 				64A3C01A1D0A9362007C1ACB /* cave-music.mp3 in Resources */,
 				64AA33D71D0A013900919CFF /* LaunchScreen.storyboard in Resources */,
 				64AA33D41D0A013900919CFF /* Assets.xcassets in Resources */,

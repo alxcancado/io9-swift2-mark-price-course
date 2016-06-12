@@ -120,6 +120,17 @@
                                     <action selector="onRestartPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PA-YG-aas"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLA-OV-ekb" userLabel="PlayButton">
+                                <rect key="frame" x="245" y="236" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dGn-EO-e10"/>
+                                    <constraint firstAttribute="width" constant="128" id="mWa-ew-v4B"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="onStartButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSZ-cq-TnO"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pokepet_color" translatesAutoresizingMaskIntoConstraints="NO" id="WyT-81-ymE">
                                 <rect key="frame" x="132" y="28" width="355" height="241"/>
                                 <constraints>
@@ -132,17 +143,12 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLA-OV-ekb" userLabel="PlayButton">
-                                <rect key="frame" x="245" y="236" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="dGn-EO-e10"/>
-                                    <constraint firstAttribute="width" constant="128" id="mWa-ew-v4B"/>
-                                </constraints>
-                                <state key="normal" image="play"/>
-                                <connections>
-                                    <action selector="onRestartPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="PNJ-8g-FEt"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="alxcancado.github.io" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1di-qo-fk9">
+                                <rect key="frame" x="155" y="459" width="308" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" red="1" green="0.91020090220000005" blue="0.32782259409999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -152,6 +158,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="ZNt-xb-Mwu" secondAttribute="bottom" constant="-30" id="60e-8d-VVD"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6GG-9Z-Roh"/>
                             <constraint firstItem="dLA-OV-ekb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8FE-Fj-K8w"/>
+                            <constraint firstItem="H4y-eq-DUH" firstAttribute="top" secondItem="1di-qo-fk9" secondAttribute="bottom" constant="60" id="8xp-Kf-8GR"/>
                             <constraint firstItem="oHX-Kd-6zE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9fX-bY-gM0"/>
                             <constraint firstItem="kK1-sV-OfU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="APT-Cy-rMV"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Bsz-dx-JXN"/>
@@ -174,6 +181,8 @@
                             <constraint firstItem="kK1-sV-OfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gNj-u6-pOd"/>
                             <constraint firstItem="WQ6-kr-oa9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="huy-8Z-mhv"/>
                             <constraint firstAttribute="trailing" secondItem="H4y-eq-DUH" secondAttribute="trailing" id="kRd-4V-YJq"/>
+                            <constraint firstItem="H4y-eq-DUH" firstAttribute="top" secondItem="1di-qo-fk9" secondAttribute="bottom" id="lAx-r8-lbX"/>
+                            <constraint firstItem="1di-qo-fk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oW4-7z-4VK"/>
                             <constraint firstItem="WQ6-kr-oa9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sG5-Qf-Ers"/>
                             <constraint firstItem="ZNt-xb-Mwu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-90" id="tCP-pp-pON"/>
                             <constraint firstItem="t50-oU-KlY" firstAttribute="top" secondItem="Tfk-r7-oNw" secondAttribute="bottom" constant="8" id="tEy-cE-OFW"/>
@@ -192,6 +201,7 @@
                                 <exclude reference="Ifn-Ca-tjX"/>
                                 <exclude reference="ZHc-Vd-IDV"/>
                                 <exclude reference="w7K-w2-RDI"/>
+                                <exclude reference="lAx-r8-lbX"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -214,8 +224,12 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="aboutLabel" destination="1di-qo-fk9" id="eqs-si-MJM"/>
+                        <outlet property="activityBarStack" destination="t50-oU-KlY" id="FgN-iA-jwi"/>
                         <outlet property="foodImage" destination="4JR-Ly-t5F" id="KVQ-yc-ptW"/>
                         <outlet property="heartImage" destination="Dhi-8e-0O6" id="A7a-8Y-OvG"/>
+                        <outlet property="livesPanelImage" destination="kK1-sV-OfU" id="Tft-g6-8tT"/>
+                        <outlet property="logoImage" destination="WyT-81-ymE" id="C8P-Nc-goL"/>
                         <outlet property="monsterImage" destination="ZNt-xb-Mwu" id="kZi-t2-Z07"/>
                         <outlet property="potionImage" destination="znB-Fx-yc7" id="sLL-J3-wcK"/>
                         <outlet property="restartButton" destination="8pJ-ie-LiH" id="quH-KM-Zaw"/>
@@ -223,6 +237,8 @@
                         <outlet property="skull1" destination="GfV-0j-7Qg" id="6Qe-d0-Unc"/>
                         <outlet property="skull2" destination="kbM-da-8U2" id="tE4-Br-zLY"/>
                         <outlet property="skull3" destination="CYa-y8-CJX" id="anf-sw-v9Z"/>
+                        <outlet property="skullStack" destination="Tfk-r7-oNw" id="2ge-uJ-wyJ"/>
+                        <outlet property="startButton" destination="dLA-OV-ekb" id="BvG-1p-4iR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

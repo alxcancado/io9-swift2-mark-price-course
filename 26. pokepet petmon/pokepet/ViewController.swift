@@ -12,6 +12,13 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var monsterImage: MonsterImage!
+    @IBOutlet weak var livesPanelImage: UIImageView!
+    @IBOutlet weak var aboutLabel: UILabel!
+    
+    
+    @IBOutlet weak var skullStack: UIStackView!
+    @IBOutlet weak var activityBarStack: UIStackView!
+    
     @IBOutlet weak var foodImage: DragImage!
     @IBOutlet weak var heartImage: DragImage!
     @IBOutlet weak var potionImage:DragImage!
@@ -21,6 +28,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var skull1: UIImageView!
     @IBOutlet weak var skull2: UIImageView!
     @IBOutlet weak var skull3: UIImageView!
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var startButton: UIButton!
     
     let DIM_APLHA: CGFloat = 0.2
     let OPAQUE: CGFloat = 1.0
@@ -39,6 +49,7 @@ class ViewController: UIViewController {
     var sfxSkull: AVAudioPlayer!
     var sfxPotion: AVAudioPlayer!
     var gameOverMusic: AVAudioPlayer!
+    var sfxButton: AVAudioPlayer!
     
     
     override func viewDidLoad() {
@@ -75,6 +86,8 @@ class ViewController: UIViewController {
             
             try sfxPotion = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bottle", ofType: "wav")!))
             
+            try sfxButton = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button", ofType: "wav")!))
+            
             musicPlayer.prepareToPlay()
             musicPlayer.play()
             
@@ -84,12 +97,13 @@ class ViewController: UIViewController {
             sfxSkull.prepareToPlay()
             sfxPotion.prepareToPlay()
             gameOverMusic.prepareToPlay()
+            sfxButton.prepareToPlay()
             
         } catch let error as NSError {
             print(error.debugDescription)
         }
         
-        startTimer()
+        //startTimer()
         
     }
     
@@ -196,15 +210,50 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onRestartPressed(){
+        sfxButton.play()
         shadowImage.hidden = true
         restartButton.hidden = true
+        
+        // hide main menu ui; show game ui
+        UiOnOff()
+        UiOnOff()
+        
         musicPlayer.stop()
         gameOverMusic.stop()
         penalties = 0
         monsterImage.playIdleAnimation()
         initGame()
+        startTimer()
+    }
+    
+    @IBAction func onStartButtonPressed(){
+        sfxButton.play()
+        
+        // hide main menu ui; show game ui
+        UiOnOff()
+        
+        initGame()
+        startTimer()
+    }
+    
+    func UiOnOff(){
+        // Game UI:
+        // default hidden=true. Now we invert values
+        monsterImage.hidden = !monsterImage.hidden
+        livesPanelImage.hidden = !livesPanelImage.hidden
+        skullStack.hidden = !skullStack.hidden
+        activityBarStack.hidden = !activityBarStack.hidden
+        
+        // Main  Menu UI:
+        // default hidden=false. Now we invert values
+        shadowImage.hidden = !shadowImage.hidden//true
+        logoImage.hidden = !logoImage.hidden//true
+        startButton.hidden = !startButton.hidden//true
+        aboutLabel.hidden = !aboutLabel.hidden // true
         
     }
+    
+    
     
 }
 
