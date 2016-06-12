@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterImage: MonsterImage!
     @IBOutlet weak var foodImage: DragImage!
     @IBOutlet weak var heartImage: DragImage!
-    @IBOutlet weak var otherImage:DragImage!
+    @IBOutlet weak var potionImage:DragImage!
     
     @IBOutlet weak var skull1: UIImageView!
     @IBOutlet weak var skull2: UIImageView!
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     var sfxHeart: AVAudioPlayer!
     var sfxDeath: AVAudioPlayer!
     var sfxSkull: AVAudioPlayer!
+    var sfxPotion: AVAudioPlayer!
     
     
     override func viewDidLoad() {
@@ -46,7 +47,7 @@ class ViewController: UIViewController {
     func initGame() {
         foodImage.dropTarget = monsterImage
         heartImage.dropTarget = monsterImage
-        //otherImage.dropTarget = monsterImage
+        potionImage.dropTarget = monsterImage
         
         skull1.alpha = DIM_APLHA
         skull2.alpha = DIM_APLHA
@@ -69,6 +70,8 @@ class ViewController: UIViewController {
             
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
             
+            try sfxPotion = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bottle", ofType: "wav")!))
+            
             musicPlayer.prepareToPlay()
             musicPlayer.play()
             
@@ -76,6 +79,7 @@ class ViewController: UIViewController {
             sfxHeart.prepareToPlay()
             sfxDeath.prepareToPlay()
             sfxSkull.prepareToPlay()
+            sfxPotion.prepareToPlay()
             
         } catch let error as NSError {
             print(error.debugDescription)
@@ -94,15 +98,15 @@ class ViewController: UIViewController {
         foodImage.userInteractionEnabled = false
         heartImage.alpha = DIM_APLHA
         heartImage.userInteractionEnabled = false
-        //otherImage.alpha = DIM_APLHA
-        //otherImage.userInteractionEnabled = false
+        potionImage.alpha = DIM_APLHA
+        potionImage.userInteractionEnabled = false
         
         if currentItem == 0 {
             sfxHeart.play()
         } else if currentItem == 1{
             sfxBite.play()
         } else {
-            sfxBite.play()
+            sfxPotion.play()
         }
     }
     
@@ -138,7 +142,7 @@ class ViewController: UIViewController {
             }
         }
         
-        let random = arc4random_uniform(2) // 0 or 1
+        let random = arc4random_uniform(3) // 0 or 1
         
         if random == 0 {
             foodImage.alpha = DIM_APLHA
@@ -147,28 +151,28 @@ class ViewController: UIViewController {
             heartImage.alpha = OPAQUE
             heartImage.userInteractionEnabled = true
             
-            //otherImage.alpha = DIM_APLHA
-            //otherImage.userInteractionEnabled = false
+            potionImage.alpha = DIM_APLHA
+            potionImage.userInteractionEnabled = false
             
         } else if random == 1 {
-            heartImage.alpha = DIM_APLHA
-            heartImage.userInteractionEnabled = false
-            
             foodImage.alpha = OPAQUE
             foodImage.userInteractionEnabled = true
             
-            //otherImage.alpha = DIM_APLHA
-            //otherImage.userInteractionEnabled = false
-        } //else {
-//            heartImage.alpha = DIM_APLHA
-//            heartImage.userInteractionEnabled = false
-//            
-//            foodImage.alpha = DIM_APLHA
-//            foodImage.userInteractionEnabled = false
+            heartImage.alpha = DIM_APLHA
+            heartImage.userInteractionEnabled = false
             
-            //otherImage.alpha = OPAQUE
-            //otherImage.userInteractionEnabled = true
-        //}
+            potionImage.alpha = DIM_APLHA
+            potionImage.userInteractionEnabled = false
+        } else {
+            foodImage.alpha = DIM_APLHA
+            foodImage.userInteractionEnabled = false
+            
+            heartImage.alpha = DIM_APLHA
+            heartImage.userInteractionEnabled = false
+            
+            potionImage.alpha = OPAQUE
+            potionImage.userInteractionEnabled = true
+        }
         
         currentItem = random
         monsterHappy = false
