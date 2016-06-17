@@ -16,6 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // No Storyboard Step-by-step
+        //
+        // delete the storyboard
+        // edit the plist file and delete the main storyboard reference
+        // create a new viewcontroller: UIViewController, init (look the YellowViewController for reference)
+        // create a new XIB file: new > user interface > empty. give the name of the view controller associated to easy remember
+        // click in the new XIB file, click in the square icon "file's owner", go to custom class tab then select/write your customized ViewController class
+        // create a UIView in the XIB file
+        // connect the file's owner to this view (control + click the drag to the view) and select the "view" outlet
+        //
+        // 1. we got a window: create a window
+        // 2. create a view controller var and init the custom view controller
+        // 3. set the window view controller
+        // 4. show the app
+        
+        //YellowViewController = YellowViewController()
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds) // 1. we got a window: create a window
+        let yellowViewController = YellowViewController(nibName: "YellowViewController", bundle: nil) // 2. we got a VC
+        window?.rootViewController = yellowViewController // because we need a window to show the app
+        window?.makeKeyAndVisible() // hey, show the app
+        
+        
+        
+        
         return true
     }
 
