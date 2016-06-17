@@ -19,18 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // No Storyboard Step-by-step
         //
-        // delete the storyboard
-        // edit the plist file and delete the main storyboard reference
-        // create a new viewcontroller: UIViewController, init (look the YellowViewController for reference)
-        // create a new XIB file: new > user interface > empty. give the name of the view controller associated to easy remember
-        // click in the new XIB file, click in the square icon "file's owner", go to custom class tab then select/write your customized ViewController class
-        // create a UIView in the XIB file
-        // connect the file's owner to this view (control + click the drag to the view) and select the "view" outlet
-        //
-        // 1. we got a window: create a window
-        // 2. create a view controller var and init the custom view controller
-        // 3. set the window view controller
-        // 4. show the app
+        // 1. delete the storyboard
+        // 2. edit the plist file and delete the main storyboard reference
+        // 3. create a new viewcontroller: UIViewController, init (look the YellowViewController for reference)
+        // 4. create a new XIB file: new > user interface > empty. give the name of the view controller associated to easy remember
+        // 5. click in the new XIB file, click in the square icon "file's owner", go to custom class tab then select/write your customized ViewController class
+        // 6. create a UIView in the XIB file
+        // 7. connect the file's owner to this view (control + click the drag to the view) and select the "view" outlet
+        // 8. we got a window: create a window
+        // 9. create a view controller var and init the custom view controller
+        // 10. set the window view controller
+        // 11. show the app
         
         //YellowViewController = YellowViewController()
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds) // 1. we got a window: create a window
