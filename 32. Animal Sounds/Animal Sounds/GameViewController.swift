@@ -9,19 +9,48 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    //reference to the BlueViewController
+  //  var imageSoundVC = ImageSoundViewController()
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+//    @IBAction func loadImageSoundView(sender: AnyObject){
+//        imageSoundVC = ImageSoundViewController(nibName: "ImageSoundViewController", bundle: nil)
+//        // its initialised already by the BlueViewController itself, so
+//        imageSoundVC = ImageSoundViewController(image: "cow1.jpg")
+//        self.presentViewController(imageSoundVC, animated: true, completion: nil)
+//        
+//    }
 
+    
+    @IBAction func loadPreviousVC(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

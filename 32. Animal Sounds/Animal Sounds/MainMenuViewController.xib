@@ -15,25 +15,37 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-Z5-9LG">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-Z5-9LG">
                     <rect key="frame" x="174" y="213" width="253" height="174"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="253" id="FNm-Ie-3wd"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-1K-o7T">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-1K-o7T">
                     <rect key="frame" x="245" y="414" width="111" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="111" id="N7u-FJ-ieL"/>
+                        <constraint firstAttribute="height" constant="66" id="hj7-cX-SYk"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     <state key="normal" title="Start">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="loadGameView:" destination="-1" eventType="touchUpInside" id="zSR-lh-bRX"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.1033995526" green="0.84326923080000005" blue="0.61844144229999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="ivg-Z5-9LG" firstAttribute="centerY" secondItem="ij1-MB-ylM" secondAttribute="centerY" id="K4e-uG-yPS"/>
+                <constraint firstItem="D3B-1K-o7T" firstAttribute="top" secondItem="ivg-Z5-9LG" secondAttribute="bottom" constant="27" id="3WN-uf-bCl"/>
+                <constraint firstAttribute="bottom" secondItem="D3B-1K-o7T" secondAttribute="bottom" constant="120" id="FTD-3e-1vz"/>
+                <constraint firstItem="ivg-Z5-9LG" firstAttribute="centerX" secondItem="D3B-1K-o7T" secondAttribute="centerX" id="K46-gt-SWF"/>
                 <constraint firstItem="D3B-1K-o7T" firstAttribute="centerX" secondItem="ij1-MB-ylM" secondAttribute="centerX" id="KTf-ej-LSf"/>
-                <constraint firstItem="ivg-Z5-9LG" firstAttribute="centerX" secondItem="ij1-MB-ylM" secondAttribute="centerX" id="Nf5-j2-zZ4"/>
+                <constraint firstItem="ivg-Z5-9LG" firstAttribute="centerY" secondItem="ij1-MB-ylM" secondAttribute="centerY" id="giP-Jh-rxf"/>
             </constraints>
             <point key="canvasLocation" x="336" y="386"/>
         </view>

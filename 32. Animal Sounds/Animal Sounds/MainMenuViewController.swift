@@ -11,7 +11,7 @@ import UIKit
 class MainMenuViewController: UIViewController {
 
     //reference to the BlueViewController
-    //var gameVC = GameViewController()
+    var gameVC = GameViewController()
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -26,10 +26,10 @@ class MainMenuViewController: UIViewController {
     //
     @IBAction func loadGameView(sender: AnyObject){
         
-        //blueVC = BlueViewController(nibName: "BlueViewController", bundle: nil)
+        gameVC = GameViewController(nibName: "GameViewController", bundle: nil)
         // its initialised already by the BlueViewController itself, so
         //blueVC = BlueViewController(printMe: "string passed from Yeallow to Blue")
-        //self.presentViewController(blueVC, animated: true, completion: nil)
+        self.presentViewController(gameVC, animated: true, completion: nil)
         
     }
     //
