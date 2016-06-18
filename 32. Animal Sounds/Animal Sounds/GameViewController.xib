@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="Animal_Sounds" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DGv-ub-cWY">
+                    <rect key="frame" x="-12" y="-12" width="766" height="424"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" alignment="bottom" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5x4-9V-wDQ">
+                            <rect key="frame" x="20" y="20" width="300" height="130"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlq-3Q-gpU">
+                                    <rect key="frame" x="20" y="50" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="160" id="Ghl-QC-oEk"/>
+                                        <constraint firstAttribute="width" constant="100" id="ZBn-kd-gTe"/>
+                                        <constraint firstAttribute="height" constant="100" id="btu-H0-vMx"/>
+                                        <constraint firstAttribute="width" constant="170" id="uc7-xB-dqI"/>
+                                    </constraints>
+                                    <state key="normal" image="cat"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ZBn-kd-gTe"/>
+                                            <exclude reference="Ghl-QC-oEk"/>
+                                            <exclude reference="btu-H0-vMx"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="ZBn-kd-gTe"/>
+                                            <include reference="btu-H0-vMx"/>
+                                            <exclude reference="uc7-xB-dqI"/>
+                                        </mask>
+                                    </variation>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8T1-uG-fSg">
+                                    <rect key="frame" x="210" y="50" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="170" id="5EN-HJ-5XI"/>
+                                        <constraint firstAttribute="width" constant="130" id="8Gl-Ia-iHn"/>
+                                        <constraint firstAttribute="height" constant="100" id="CQK-Dn-MiO"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Chp-Mi-zcg"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="eRo-qw-FqW"/>
+                                        <constraint firstAttribute="height" constant="160" id="mDj-bx-DAd"/>
+                                        <constraint firstAttribute="height" constant="130" id="tzd-6O-6uN"/>
+                                        <constraint firstAttribute="width" constant="100" id="whh-9P-M6x"/>
+                                    </constraints>
+                                    <state key="normal" image="cow"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="CQK-Dn-MiO"/>
+                                            <exclude reference="whh-9P-M6x"/>
+                                            <exclude reference="8Gl-Ia-iHn"/>
+                                            <exclude reference="Chp-Mi-zcg"/>
+                                            <exclude reference="eRo-qw-FqW"/>
+                                            <exclude reference="tzd-6O-6uN"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="CQK-Dn-MiO"/>
+                                            <include reference="whh-9P-M6x"/>
+                                            <exclude reference="5EN-HJ-5XI"/>
+                                            <exclude reference="8Gl-Ia-iHn"/>
+                                            <exclude reference="Chp-Mi-zcg"/>
+                                            <exclude reference="mDj-bx-DAd"/>
+                                            <exclude reference="eRo-qw-FqW"/>
+                                            <exclude reference="tzd-6O-6uN"/>
+                                        </mask>
+                                    </variation>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZx-iC-4Y1">
+                                    <rect key="frame" x="391" y="20" width="100" height="130"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="A9p-cR-Ibv"/>
+                                        <constraint firstAttribute="height" constant="130" id="BE2-dP-ciE"/>
+                                        <constraint firstAttribute="height" constant="240" id="RcR-i1-b6O"/>
+                                        <constraint firstAttribute="width" constant="170" id="nbv-5Y-dis"/>
+                                    </constraints>
+                                    <state key="normal" image="donkey"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="A9p-cR-Ibv"/>
+                                            <exclude reference="BE2-dP-ciE"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <exclude reference="RcR-i1-b6O"/>
+                                            <exclude reference="nbv-5Y-dis"/>
+                                            <include reference="A9p-cR-Ibv"/>
+                                            <include reference="BE2-dP-ciE"/>
+                                        </mask>
+                                    </variation>
+                                </button>
+                            </subviews>
+                            <variation key="heightClass=compact" alignment="bottom"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" alignment="bottom" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NI6-6L-hXH">
+                            <rect key="frame" x="162" y="20" width="584" height="384"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyo-kl-Wlw">
+                                    <rect key="frame" x="20" y="50" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="CTu-cJ-kcc"/>
+                                        <constraint firstAttribute="height" constant="160" id="MVK-G2-dEB"/>
+                                        <constraint firstAttribute="height" constant="100" id="T1x-RR-vSg"/>
+                                        <constraint firstAttribute="width" constant="170" id="U1z-eM-Iyb"/>
+                                    </constraints>
+                                    <state key="normal" image="cat"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="CTu-cJ-kcc"/>
+                                            <exclude reference="MVK-G2-dEB"/>
+                                            <exclude reference="T1x-RR-vSg"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="CTu-cJ-kcc"/>
+                                            <include reference="T1x-RR-vSg"/>
+                                            <exclude reference="U1z-eM-Iyb"/>
+                                        </mask>
+                                    </variation>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4w-Wx-sNV">
+                                    <rect key="frame" x="210" y="50" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="0xH-Jk-9kK"/>
+                                        <constraint firstAttribute="width" constant="100" id="C3g-gr-IT6"/>
+                                        <constraint firstAttribute="width" constant="170" id="HLx-U7-O48"/>
+                                        <constraint firstAttribute="width" constant="130" id="Mdz-GX-ftb"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="U2o-tE-ieH"/>
+                                        <constraint firstAttribute="height" constant="160" id="uun-2q-SwQ"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="vcy-bu-5q3"/>
+                                        <constraint firstAttribute="height" constant="130" id="yPC-VT-M5o"/>
+                                    </constraints>
+                                    <state key="normal" image="cow"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="0xH-Jk-9kK"/>
+                                            <exclude reference="C3g-gr-IT6"/>
+                                            <exclude reference="Mdz-GX-ftb"/>
+                                            <exclude reference="U2o-tE-ieH"/>
+                                            <exclude reference="vcy-bu-5q3"/>
+                                            <exclude reference="yPC-VT-M5o"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="0xH-Jk-9kK"/>
+                                            <include reference="C3g-gr-IT6"/>
+                                            <exclude reference="HLx-U7-O48"/>
+                                            <exclude reference="Mdz-GX-ftb"/>
+                                            <exclude reference="U2o-tE-ieH"/>
+                                            <exclude reference="uun-2q-SwQ"/>
+                                            <exclude reference="vcy-bu-5q3"/>
+                                            <exclude reference="yPC-VT-M5o"/>
+                                        </mask>
+                                    </variation>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgO-dN-yAa">
+                                    <rect key="frame" x="391" y="20" width="100" height="130"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="240" id="oHc-HP-bVg"/>
+                                        <constraint firstAttribute="width" constant="170" id="vBC-hF-4kB"/>
+                                        <constraint firstAttribute="width" constant="100" id="vDQ-MM-I88"/>
+                                        <constraint firstAttribute="height" constant="130" id="vZO-9X-l01"/>
+                                    </constraints>
+                                    <state key="normal" image="donkey"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="vDQ-MM-I88"/>
+                                            <exclude reference="vZO-9X-l01"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <exclude reference="oHc-HP-bVg"/>
+                                            <exclude reference="vBC-hF-4kB"/>
+                                            <include reference="vDQ-MM-I88"/>
+                                            <include reference="vZO-9X-l01"/>
+                                        </mask>
+                                    </variation>
+                                </button>
+                            </subviews>
+                            <variation key="heightClass=compact" alignment="bottom"/>
+                        </stackView>
+                    </subviews>
+                    <variation key="heightClass=compact" alignment="fill" misplaced="YES">
+                        <rect key="frame" x="150" y="8" width="916" height="270"/>
+                    </variation>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.86279250870000002" blue="0.1321182118" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="DGv-ub-cWY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="7cr-bO-2KT"/>
+                <constraint firstItem="DGv-ub-cWY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="ZLH-Db-Dk3"/>
+                <constraint firstAttribute="trailing" secondItem="DGv-ub-cWY" secondAttribute="trailing" constant="5" id="yos-uF-UJX"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7cr-bO-2KT"/>
+                    <exclude reference="ZLH-Db-Dk3"/>
+                    <exclude reference="yos-uF-UJX"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="7cr-bO-2KT"/>
+                    <include reference="ZLH-Db-Dk3"/>
+                    <include reference="yos-uF-UJX"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="472" y="406"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cat" width="213" height="172"/>
+        <image name="cow" width="211" height="238"/>
+        <image name="donkey" width="172" height="312"/>
+    </resources>
+</document>
