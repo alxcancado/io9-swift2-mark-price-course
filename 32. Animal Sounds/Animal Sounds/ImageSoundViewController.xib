@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageSoundViewController" customModule="Animal_Sounds" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkJ-Ve-q4L">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <state key="normal" image="cow1"/>
+                    <connections>
+                        <action selector="loadPreviousVC:" destination="-1" eventType="touchUpInside" id="1IZ-gj-c0N"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AkJ-Ve-q4L" secondAttribute="bottom" id="3Aa-i9-Urv"/>
+                <constraint firstItem="AkJ-Ve-q4L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7KC-7Q-7WD"/>
+                <constraint firstItem="AkJ-Ve-q4L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CQ0-pu-JTw"/>
+                <constraint firstItem="AkJ-Ve-q4L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FjH-zk-swO"/>
+                <constraint firstAttribute="trailing" secondItem="AkJ-Ve-q4L" secondAttribute="trailing" id="SHy-Ym-XhN"/>
+                <constraint firstItem="AkJ-Ve-q4L" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fYU-Km-d2i"/>
+                <constraint firstItem="AkJ-Ve-q4L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="juC-uA-bR2"/>
+                <constraint firstItem="AkJ-Ve-q4L" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="t2g-LC-DWB"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="FjH-zk-swO"/>
+                    <exclude reference="fYU-Km-d2i"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="cow1" width="1024" height="768"/>
+    </resources>
+</document>

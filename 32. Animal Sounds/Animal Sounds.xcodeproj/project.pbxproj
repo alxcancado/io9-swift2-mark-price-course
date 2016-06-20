@@ -14,6 +14,8 @@
 		644791631D14EC280011696C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447914C1D14E7320011696C /* AppDelegate.swift */; };
 		644791661D14EDCE0011696C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644791641D14EDCE0011696C /* GameViewController.swift */; };
 		644791671D14EDCE0011696C /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644791651D14EDCE0011696C /* GameViewController.xib */; };
+		64D1E5221D178C9700D7D0A2 /* ImageSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D1E5201D178C9700D7D0A2 /* ImageSoundViewController.swift */; };
+		64D1E5231D178C9700D7D0A2 /* ImageSoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1E5211D178C9700D7D0A2 /* ImageSoundViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		644791611D14E7E20011696C /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		644791641D14EDCE0011696C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		644791651D14EDCE0011696C /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		64D1E5201D178C9700D7D0A2 /* ImageSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSoundViewController.swift; sourceTree = "<group>"; };
+		64D1E5211D178C9700D7D0A2 /* ImageSoundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageSoundViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			children = (
 				644791611D14E7E20011696C /* MainMenuViewController.xib */,
 				644791651D14EDCE0011696C /* GameViewController.xib */,
+				64D1E5211D178C9700D7D0A2 /* ImageSoundViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			children = (
 				6447914E1D14E7320011696C /* MainMenuViewController.swift */,
 				644791641D14EDCE0011696C /* GameViewController.swift */,
+				64D1E5201D178C9700D7D0A2 /* ImageSoundViewController.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 				644791571D14E7320011696C /* LaunchScreen.storyboard in Resources */,
 				644791621D14E7E20011696C /* MainMenuViewController.xib in Resources */,
 				644791541D14E7320011696C /* Assets.xcassets in Resources */,
+				64D1E5231D178C9700D7D0A2 /* ImageSoundViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D1E5221D178C9700D7D0A2 /* ImageSoundViewController.swift in Sources */,
 				644791631D14EC280011696C /* AppDelegate.swift in Sources */,
 				644791661D14EDCE0011696C /* GameViewController.swift in Sources */,
 				6447914F1D14E7320011696C /* MainMenuViewController.swift in Sources */,
