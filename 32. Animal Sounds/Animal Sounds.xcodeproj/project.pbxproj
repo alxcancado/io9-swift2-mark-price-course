@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		642C69471D19218400C06CA3 /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 642C69461D19218400C06CA3 /* cow.mp3 */; };
 		6447914F1D14E7320011696C /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447914E1D14E7320011696C /* MainMenuViewController.swift */; };
 		644791541D14E7320011696C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 644791531D14E7320011696C /* Assets.xcassets */; };
 		644791571D14E7320011696C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644791551D14E7320011696C /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		642C69461D19218400C06CA3 /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
 		644791491D14E7320011696C /* Animal Sounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal Sounds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6447914C1D14E7320011696C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6447914E1D14E7320011696C /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		6447915E1D14E7720011696C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				642C69461D19218400C06CA3 /* cow.mp3 */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642C69471D19218400C06CA3 /* cow.mp3 in Resources */,
 				644791671D14EDCE0011696C /* GameViewController.xib in Resources */,
 				644791571D14E7320011696C /* LaunchScreen.storyboard in Resources */,
 				644791621D14E7E20011696C /* MainMenuViewController.xib in Resources */,

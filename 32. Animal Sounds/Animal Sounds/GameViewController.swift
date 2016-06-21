@@ -9,7 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    //reference to the BlueViewController
+    
     var imageSoundVC = ImageSoundViewController()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -37,10 +37,16 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loadImageSoundView(sender: AnyObject){
-        imageSoundVC = ImageSoundViewController(nibName: "ImageSoundViewController", bundle: nil)
+    @IBAction func loadImageSoundView(sender: AnyObject!){
+        //imageSoundVC = ImageSoundViewController(nibName: "ImageSoundViewController", bundle: nil)
         // its initialised already by the BlueViewController itself, so
-        // imageSoundVC = ImageSoundViewController(image: "cow1.jpg")
+        
+        if sender.tag == 1 {
+            imageSoundVC = ImageSoundViewController(animalPath: "cow1.jpg")
+        } else if sender.tag == 2 {
+            imageSoundVC = ImageSoundViewController(animalPath: "cow2.jpg")
+        } 
+        
         self.presentViewController(imageSoundVC, animated: true, completion: nil)
         
     }

@@ -10,6 +10,9 @@ import UIKit
 
 class ImageSoundViewController: UIViewController {
 
+    @IBOutlet weak var animalImageButton: UIButton!
+    var imagePath = ""
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -18,18 +21,38 @@ class ImageSoundViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    convenience init(animalPath: String?){
+        self.init(nibName: "ImageSoundViewController", bundle: nil)
+        imagePath = animalPath!
+        
+        
+        
+//        if UIImage(named: animalPath) != nil {
+//            animalImageButton?.setImage(UIImage(named: animalPath), forState: UIControlState.Normal)
+//        }
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+            if let image = UIImage(named: imagePath) {
+                animalImageButton.setImage(image, forState: .Normal)
+            }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
     @IBAction func loadPreviousVC(sender: AnyObject) {

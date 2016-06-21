@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageSoundViewController" customModule="Animal_Sounds" customModuleProvider="target">
             <connections>
+                <outlet property="animalImageButton" destination="AkJ-Ve-q4L" id="Stl-od-Ihq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,9 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkJ-Ve-q4L">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkJ-Ve-q4L">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <state key="normal" image="cow1"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.1033995526" green="0.84326923080000005" blue="0.61844144229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="loadPreviousVC:" destination="-1" eventType="touchUpInside" id="1IZ-gj-c0N"/>
                     </connections>
@@ -42,7 +45,4 @@
             </variation>
         </view>
     </objects>
-    <resources>
-        <image name="cow1" width="1024" height="768"/>
-    </resources>
 </document>
