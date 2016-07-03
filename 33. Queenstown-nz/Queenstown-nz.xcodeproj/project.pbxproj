@@ -12,6 +12,7 @@
 		64A2564A1D27A540002855AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A256481D27A540002855AF /* Main.storyboard */; };
 		64A2564C1D27A540002855AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A2564B1D27A540002855AF /* Assets.xcassets */; };
 		64A2564F1D27A540002855AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A2564D1D27A540002855AF /* LaunchScreen.storyboard */; };
+		64A256571D28B6D5002855AF /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A256561D28B6D5002855AF /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		64A2564B1D27A540002855AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A2564E1D27A540002855AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64A256501D27A540002855AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A256561D28B6D5002855AF /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				64A2564B1D27A540002855AF /* Assets.xcassets */,
 				64A2564D1D27A540002855AF /* LaunchScreen.storyboard */,
 				64A256501D27A540002855AF /* Info.plist */,
+				64A256561D28B6D5002855AF /* DetailVC.swift */,
 			);
 			path = "Queenstown-nz";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				64A256471D27A540002855AF /* ViewController.swift in Sources */,
 				64A256451D27A540002855AF /* AppDelegate.swift in Sources */,
+				64A256571D28B6D5002855AF /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +292,7 @@
 				64A256551D27A540002855AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
